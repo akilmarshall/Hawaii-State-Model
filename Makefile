@@ -1,8 +1,8 @@
 hawaii_punch: STL/raw/hawaii.stl
 	# openscad src/main.scad -D 'part="hawaii_punch"' -o STL/intermediete/hawaii/hawaii_punch.3mf
-	openscad src/main.scad -D 'part="hawaii_punch"' -o STL/islands/hawaii.3mf
+	openscad src/main.scad -D 'part="hawaii_punch"' -o models/islands/hawaii.3mf
 hawaii_cut_district: STL/islands/hawaii.stl
-	openscad src/main.scad -D 'part="hawaii_cut_district"' -o STL/intermediete/hawaii/cut_district.3mf
+	openscad src/main.scad -D 'part="hawaii_cut_district"' -o models/intermediete/hawaii/cut_district.3mf
 # current_directory = $(shell pwd)/STL/
 
 # $(current_directory)district.stl: SVG/district.svg
