@@ -20,10 +20,9 @@ module hawaii_cut_district() {
     union() {
         hawaii();
         color("blue")
-        // translate([260, 181, -50])
-        translate([125, -1350, -50])
+        translate([88, -867, -50])
         linear_extrude(100)
-        scale([11, 11, 1])
+        scale([7, 7, 1])
         import("../SVG/district_topo.svg");
     }
 }
