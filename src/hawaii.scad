@@ -17,7 +17,7 @@ module hawaii() {
 
 // split the base model into districts
 module hawaii_cut_district() {
-    union() {
+    difference() {
         hawaii();
         color("blue")
         translate([88, -867, -50])
