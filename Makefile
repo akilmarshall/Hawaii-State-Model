@@ -1,8 +1,13 @@
+sync_push:
+	rsync -r models makani:~/Project/Hawaii-State-Model
+sync_pull: 
+	rsync -r makani:~/Project/Hawaii-State-Model/models models
+
 hawaii_punch: models/raw/hawaii.stl
 	# openscad src/main.scad -D 'part="hawaii_punch"' -o STL/intermediete/hawaii/hawaii_punch.3mf
-	openscad src/main.scad -D 'part="hawaii_punch"' -o models/islands/hawaii.3mf
+	openscad src/main.scad -D 'part="hawaii_punch"' -o models/islands/hawaii.stl
 hawaii_cut_district: models/islands/hawaii.stl
-	openscad src/main.scad -D 'part="hawaii_cut_district"' -o models/intermediete/hawaii/cut_district.3mf
+	openscad src/main.scad -D 'part="hawaii_cut_district"' -o models/intermediete/hawaii/cut_district.stl
 # current_directory = $(shell pwd)/STL/
 
 # $(current_directory)district.stl: SVG/district.svg
