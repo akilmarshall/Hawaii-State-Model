@@ -1,7 +1,7 @@
 sync_push:
 	rsync -r models makani:~/Project/Hawaii-State-Model
 sync_pull: 
-	rsync -r makani:~/Project/Hawaii-State-Model/models models
+	rsync -r makani:~/Project/Hawaii-State-Model/models .
 
 hawaii_punch: models/raw/hawaii.stl
 	# openscad src/main.scad -D 'part="hawaii_punch"' -o STL/intermediete/hawaii/hawaii_punch.3mf
