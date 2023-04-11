@@ -2,12 +2,14 @@
 
 module hawaii_punch() {
     difference() {
-        import("../STL/raw/hawaii.stl");
+        import("../models/raw/hawaii.stl");
         color("blue")
-        linear_extrude(100)
-        scale([5, 5, 1])
-        translate([-20, -250, -50])
-        import("../SVG/circle.svg");
+        translate([0, -900, -41])
+        cube([850, 900, 50]);
+        //linear_extrude(100)
+        //scale([5, 5, 1])
+        //translate([-20, -250, -50])
+        //import("../SVG/circle.svg");
     }
 }
 
@@ -31,5 +33,5 @@ module hawaii_cut_district() {
 
 // write the town names on the district pieces
 module hawaii_town_name() {
-    import("../STL/intermediete/hawaii/current_directory.3mf");
+    import("../models/intermediete/hawaii/current_directory.3mf");
 }
